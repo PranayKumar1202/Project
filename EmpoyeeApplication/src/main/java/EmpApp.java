@@ -51,7 +51,7 @@ public class EmpApp {
                     employee.getEmail() != null && !employee.getEmail().isEmpty() &&
                     employee.getPhoneNumbers() != null && !employee.getPhoneNumbers().isEmpty() &&
                     employee.getDoj() != null && !employee.getDoj().isEmpty() &&
-                    employee.getSalary() > 0;
+                employee.getSalary() > 0;
         }
 
         private double calculateTotalSalary(Employee employee) {
@@ -97,9 +97,6 @@ public class EmpApp {
         private String doj;
         private double salary;
 
-        public Employee() {
-            
-        }
 
         public Employee(String employeeId, String firstName, String lastName, String email, List<String> phoneNumbers, String doj, double salary) {
             this.employeeId = employeeId;
@@ -177,9 +174,7 @@ public class EmpApp {
         private double taxAmount;
         private double cessAmount;
 
-        public TaxDetails() {}
-
-        public TaxDetails(String employeeId, String firstName, String lastName, double yearlySalary, double taxAmount, double cessAmount) {
+            public TaxDetails(String employeeId, String firstName, String lastName, double yearlySalary, double taxAmount, double cessAmount) {
             this.employeeId = employeeId;
             this.firstName = firstName;
             this.lastName = lastName;
